@@ -44,7 +44,7 @@ export const SideBar = () => {
               quality={1}
             />
           </span>
-          <span className="text-sm md:text-base font-bold">Jose Mauricio Granados M</span>
+          <span className="text-sm md:text-base font-bold">Jose Mauricio Granados</span>
         </a>
       </div>
       <div id="nav" className="w-full px-6">
