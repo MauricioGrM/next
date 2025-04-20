@@ -1,4 +1,5 @@
-const page = () => {
-  return <div> Counter Page</div>;
+const CounterPage = () => {
+  return <span className="text-7xl">Counter Page</span>;
 };
-export default page;
+
+export default CounterPage;
