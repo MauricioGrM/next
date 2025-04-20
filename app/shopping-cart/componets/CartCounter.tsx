@@ -1,8 +1,12 @@
 "use client";
 import { useState } from "react";
 
-export const CartCounter = () => {
-  const [counter, setCounter] = useState(0);
+interface Props {
+  value?: number;
+}
+
+export const CartCounter = ({ value = 0 }: Props) => {
+  const [counter, setCounter] = useState(value);
   return (
     <>
       <span className="text-7xl">{counter}</span>
