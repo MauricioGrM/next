@@ -2,13 +2,9 @@ import { PokemonResponse } from "@/app/pokemons";
 import { Metadata } from "next";
 import Image from "next/image";
 
-interface Props {
-  params: {
-    id: string;
-  };
-}
+type Params = Promise<{ id: string }>;
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { id } = await params;
   const { name } = await getPokemon(id);
   return {
@@ -25,7 +21,7 @@ const getPokemon = async (id: string): Promise<PokemonResponse> => {
   return pokemon;
 };
 
-export default async function PokemonPage({ params }: Props) {
+export default async function PokemonPage({ params }: { params: Params }) {
   const { id } = await params;
   const pokemon = await getPokemon(id);
 
