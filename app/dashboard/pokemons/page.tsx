@@ -16,6 +16,7 @@ const getPokemons = async (limit = 20, offset = 0): Promise<SimplePokemon[]> => 
       image,
     };
   });
+  // throw new Error("Error al cargar los pokemons");
   return pokemons;
 };
 
