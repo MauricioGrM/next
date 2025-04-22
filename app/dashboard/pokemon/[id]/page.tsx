@@ -34,7 +34,7 @@ export default async function PokemonPage({ params }: Props) {
       <div className="relative flex flex-col items-center rounded-[20px] w-[700px] mx-auto bg-white bg-clip-border  shadow-lg  p-3">
         <div className="mt-2 mb-8 w-full">
           <h1 className="px-2 text-xl font-bold text-slate-700 capitalize">
-            #{pokemon.id} {pokemon.name}
+            {pokemon.id} {pokemon.name}
           </h1>
           <div className="flex flex-col justify-center items-center">
             <Image
